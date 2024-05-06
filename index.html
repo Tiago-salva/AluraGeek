@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AluraGeek</title>
+</head>
+<body>
+    
+    <div class="content">
+        <header class="header">
+            <h1 class="header__title">AluraGeek</h1>
+            <button class="header__add-btn">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+            </button>
+        </header>
+
+        <main class="main">
+            <h2 class="main__title">Mis productos</h2>
+            <div class="main__productos-container">
+                <ul class="main__productos-container-lista"></ul>
+            </div>
+        </main>
+
+        <form action="" class="add-product" autocomplete="off" novalidate>
+            <h2 class="add-product-title">Agregar producto</h2>
+
+            <input type="text" id="name-input" class="input" placeholder="Nombre" maxlength="25" required>
+            <span class="fix-mensaje"></span>
+            <input type="text" id="precio-input" class="input" placeholder="Precio" minlength="1" maxlength="8" pattern="[0-9]\d*" required>
+            <span class="fix-mensaje"></span>
+            <input type="text" id="img-input" class="input" placeholder="Imagen" pattern="^https?:\/\/.+\.(jpg|jpeg|png|webp)$" required>
+            <span class="fix-mensaje"></span>
+
+            <div class="button-container">
+                <button type="submit" class="btn-enviar">Enviar</button>
+                <button type="button" class="btn-reset">Reset</button>
+            </div>
+        </form>
+
+        <footer class="footer">
+            <h4 class="footer-title">AluraGeek</h4>
+            <p class="footer-paragraph-1">Desarrolado por <a href="https://github.com/Tiago-salva">Tiago Salvatierra</a></p>
+            <p class="footer-paragraph-2">Alura Latam - 2024</p>
+        </footer>
+
+        <div class="error-container">
+            <img src="svg/circle-exclamation-solid.svg" alt="Simbolo de error" class="error-icon">
+            <p class="error-mensaje"></p>
+        </div>
+    </div>
+
+    <script src="js/DOM.js" type="module" defer></script>
+    <script src="js/mostrarProductos.js" type="module"></script>
+    <script src="js/crearProducto.js" type="module"></script>
+</body>
+</html>
