@@ -3,12 +3,15 @@ const allFixMessages = document.querySelectorAll(".fix-mensaje");
 
 async function validarFormulario() {
   let esValido = true;
+  // Valido cada input
   allInputs.forEach((input, index) => {
+    // Si algun input es incorrecto, cambiar la variable
     if (!validarInput(input, index)) {
       esValido = false;
     }
   });
 
+  // Si todos los inputs son validos, validar el URL de la imagen
   if (esValido) {
     const resultadoImagen = await validarImagenUrl(allInputs[2].value);
     return resultadoImagen;
@@ -18,28 +21,31 @@ async function validarFormulario() {
 }
 
 function validarInput(input, index) {
+  // Valido el pattern
   if (input.validity.patternMismatch) {
     allFixMessages[index].textContent =
       index === 1 ? "Solo se permiten números" : "Introduce una URL válida";
     return false;
-  } else if (input.validity.rangeOverflow) {
-    allFixMessages[index].textContent = "El valor debe ser menor a 10 millones";
-    return false;
-  } else if (input.validity.rangeUnderflow) {
-    allFixMessages[index].textContent = "El valor debe ser mayor a 1";
-    return false;
-  } else if (input.validity.tooLong) {
+  }
+  // Valido la cantidad de caracteres
+  else if (input.validity.tooLong) {
     allFixMessages[index].textContent =
       "El nombre debe tener menos de 25 carácteres";
     return false;
-  } else if (input.validity.valueMissing) {
+  }
+  // Valido si el input esta vacio
+  else if (input.validity.valueMissing) {
     allFixMessages[index].textContent = "Por favor, rellene este campo";
     return false;
-  } else if (input.value.startsWith("0")) {
+  }
+  // Valido si el input del precio empieza con 0
+  else if (input.value.startsWith("0")) {
     allFixMessages[index].textContent =
       index === 1 ? "El valor no puede empezar con 0" : "";
     return false;
-  } else {
+  }
+  // Si nada de esto sucede, vaciar todos los mensajes
+  else {
     allFixMessages[index].textContent = "";
     return true;
   }

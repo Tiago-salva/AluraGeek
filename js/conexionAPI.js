@@ -1,4 +1,5 @@
 async function listarProductos() {
+  // Consigo todos los productos que existan
   const conexion = await fetch("http://localhost:3001/productos");
   const conexionConvertida = await conexion.json();
 
@@ -19,6 +20,7 @@ async function enviarProducto(index, img, nombre, precio) {
 
   const conexionConvertida = await conexion.json();
 
+  // Si hay algun error con la conexion, un pop up aparecera
   if (!conexion.ok) {
     const errorContainer = document.querySelector(".error-container");
     const errorMensaje = document.querySelector(".error-mensaje");
@@ -33,11 +35,14 @@ async function enviarProducto(index, img, nombre, precio) {
 }
 
 async function eliminarProducto(id) {
+  // Obtengo el id del producto a eliminar gracias al boton
   let conexionConvertida = await conexionAPI.listarProductos();
   let idAEliminar = id;
+  // Filtro los elementos para quitar el que tenga el mismo id que obtuve anteriormente
   conexionConvertida = conexionConvertida.filter(
     (producto) => producto.id !== idAEliminar
   );
+  // Se elimina el elemento
   fetch(`http://localhost:3001/productos/${id}`, {
     method: "DELETE",
   })
