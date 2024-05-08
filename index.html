@@ -11,7 +11,8 @@
     <div class="content">
         <header class="header">
             <h1 class="header__title">AluraGeek</h1>
-            <button class="header__add-btn">
+            <p class="header__add-btn" id="header-add-btn-text">Agregar producto</p>
+            <button class="header__add-btn" id="header-add-btn-input">
                 <span class="line-1"></span>
                 <span class="line-2"></span>
             </button>
@@ -19,20 +20,26 @@
 
         <main class="main">
             <h2 class="main__title">Mis productos</h2>
-            <div class="main__productos-container">
-                <ul class="main__productos-container-lista"></ul>
-            </div>
+            <ul class="main__productos-container"></ul>
         </main>
 
         <form action="" class="add-product" autocomplete="off" novalidate>
-            <h2 class="add-product-title">Agregar producto</h2>
+            <h2 class="add-product-title">Nuevo producto</h2>
 
-            <input type="text" id="name-input" class="input" placeholder="Nombre" maxlength="25" required>
-            <span class="fix-mensaje"></span>
-            <input type="text" id="precio-input" class="input" placeholder="Precio" minlength="1" maxlength="8" pattern="[0-9]\d*" required>
-            <span class="fix-mensaje"></span>
-            <input type="text" id="img-input" class="input" placeholder="Imagen" pattern="^https?:\/\/.+\.(jpg|jpeg|png|webp)$" required>
-            <span class="fix-mensaje"></span>
+            <div class="input-container">
+                <input type="text" id="name-input" class="input" placeholder="Nombre" maxlength="25" required>
+                <span class="fix-mensaje"></span>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="precio-input" class="input" placeholder="Precio" minlength="1" maxlength="8" pattern="[0-9]\d*" required>
+                <span class="fix-mensaje"></span>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="img-input" class="input" placeholder="Imagen" pattern="^https?:\/\/.+\.(jpg|jpeg|png|webp)$" required>
+                <span class="fix-mensaje"></span>
+            </div>
 
             <div class="button-container">
                 <button type="submit" class="btn-enviar">Enviar</button>

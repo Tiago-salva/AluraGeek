@@ -35,6 +35,36 @@
       "imagen": "https://cdn.gameplanet.com/wp-content/uploads/2024/02/29130451/711719579441-consola-playstation-5-slim-6.jpg",
       "nombre": "Play 5 Slim",
       "precio": "1.200.000"
+    },
+    {
+      "id": "7",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Xbox-Console-wDuke-L.jpg/1200px-Xbox-Console-wDuke-L.jpg",
+      "nombre": "Xbox original",
+      "precio": "750.000"
+    },
+    {
+      "id": "8",
+      "imagen": "https://m.media-amazon.com/images/I/61oFqsoj9nL._SL1000_.jpg",
+      "nombre": "Xbox 360",
+      "precio": "300.000"
+    },
+    {
+      "id": "9",
+      "imagen": "https://m.media-amazon.com/images/I/61zjj2sgXML._SL1500_.jpg",
+      "nombre": "Xbox one",
+      "precio": "500.000"
+    },
+    {
+      "id": "10",
+      "imagen": "https://m.media-amazon.com/images/I/61f1agMOeTL._SL1400_.jpg",
+      "nombre": "Xbox series S",
+      "precio": "800.000"
+    },
+    {
+      "id": "11",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_877720-MLU72639787401_112023-O.webp",
+      "nombre": "Xbox series X",
+      "precio": "1.500.000"
     }
   ]
 }
