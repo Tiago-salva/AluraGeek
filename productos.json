@@ -65,6 +65,12 @@
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_877720-MLU72639787401_112023-O.webp",
       "nombre": "Xbox series X",
       "precio": "1.500.000"
+    },
+    {
+      "id": "0",
+      "imagen": "https://http2.mlstatic.com/D_Q_NP_803086-MLA47920649105_102021-O.webp",
+      "nombre": "Nintendo Switch",
+      "precio": "800.000"
     }
   ]
 }
